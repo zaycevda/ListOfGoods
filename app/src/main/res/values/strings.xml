@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">ListOfGoods</string>
+
+    <string name="list_of_goods">Список товаров</string>
+    <string name="in_stock">На складе</string>
+    <string name="date_added">Дата добавления</string>
+    <string name="edit">Редактировать</string>
+
+</resources>
