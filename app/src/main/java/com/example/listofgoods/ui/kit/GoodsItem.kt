@@ -46,6 +46,7 @@ fun GoodsItem(
         VerticalSpacer(height = 8.dp)
         LabeledValues(
             amount = goodsModel.amount.toString(),
+            id = goodsModel.id.toString(),
             date = goodsModel.time.formattedDate
         )
     }
@@ -86,10 +87,13 @@ private fun Tags(tags: List<String>) {
 @Composable
 private fun LabeledValues(
     amount: String,
+    id: String,
     date: String
 ) {
     Row {
         InStock(text = amount)
+        HorizontalSpacer()
+        Id(text = id)
         HorizontalSpacer()
         DateAdded(text = date)
         HorizontalSpacer(width = 24.dp)
@@ -101,6 +105,16 @@ private fun InStock(text: String) {
     LabeledValue(
         label = stringResource(
             id = R.string.in_stock
+        ),
+        value = text
+    )
+}
+
+@Composable
+private fun Id(text: String) {
+    LabeledValue(
+        label = stringResource(
+            id = R.string.id
         ),
         value = text
     )
